@@ -25,7 +25,7 @@ module.exports = class botinfoCommand extends Command {
         const embed = new RichEmbed()
 
         embed.setThumbnail(this.client.user.avatarURL)
-        embed.setDescription(`Info of ${this.client.user.username}`)
+        embed.setTitle(`Info of ${this.client.user.username}`)
         embed.setColor('RANDOM')
         embed.addField('Creator', '<@!444454206800396309> | Sharif#2769')
 	embed.addField("Created At", `${this.client.user.createdAt}`)
@@ -33,7 +33,8 @@ module.exports = class botinfoCommand extends Command {
         embed.addField('Library', 'discord.js')
         embed.addField('Operating System', `${os.platform} ${arch}`)
 	embed.addField('Usefull link:', '[Invite me](https://discordapp.com/oauth2/authorize?client_id=454618737153409026&scope=bot&permissions=1346452502) | [Vote me](https://discordbots.org/bot/454618737153409026/vote) | [Support server](https://discord.gg/kDAYc8M)') 
-            code: 'AsciiDoc'
+        embed.setFooter(`Requested by: ${msg.author.tag}`)
+	    code: 'AsciiDoc'
         return msg.embed(embed);
     }
 
