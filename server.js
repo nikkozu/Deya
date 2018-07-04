@@ -6,11 +6,12 @@ const DBL = require("dblapi.js");
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 const fs = require('fs')
+const { PREFIX } = require('./config');
 
 // ini ingat²lah
 const client = new Commando.Client({
   owner: '444454206800396309', 
-  commandPrefix: 'dy!', 
+  commandPrefix: './config', 
   disableEveryone: true,
   unknownCommandResponse: false
 });
@@ -69,7 +70,7 @@ client.on('ready', () => {
 
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
-	if (!msg.content.startsWith(commandPrefix)) return undefined;
+	if (!msg.content.startsWith(PREFIX)) return undefined;
 
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
@@ -77,7 +78,7 @@ client.on('message', async msg => { // eslint-disable-line
 	const serverQueue = queue.get(msg.guild.id);
 
 	let command = msg.content.toLowerCase().split(' ')[0];
-	command = command.slice(commandPrefix.length)
+	command = command.slice(PREFIX.length)
 	
 
 
