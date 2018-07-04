@@ -5,7 +5,7 @@ module.exports = class statsCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'stats',
-	    aliases: ["info", "specs"],
+	    aliases: ["specs"],
             group: 'group4',
             memberName: 'stats',
 	    description: 'Shows stats about the Bot'
