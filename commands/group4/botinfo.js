@@ -28,7 +28,7 @@ module.exports = class botinfoCommand extends Command {
         embed.setDescription(`Info of ${this.client.user.username}`)
         embed.setColor('RANDOM')
         embed.addField('Creator', '<@!444454206800396309> | Sharif#2769')
-	embed.addField("Created At", `${bot.user.createdAt}`)
+	embed.addField("Created At", `${this.client.user.createdAt}`)
         embed.addField('Node', `${process.version}`)
         embed.addField('Library', 'discord.js')
         embed.addField('Operating System', `${os.platform} ${arch}`)
