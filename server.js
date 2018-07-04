@@ -278,7 +278,7 @@ var pleyembed = new RichEmbed()
   .addField('Video ID', `${song.id}`, true)
   .addField("Volume", `${serverQueue.volume}%`, true)
   .addField("Duration", `${song.durationm}min ${song.durations}sec`, true)
-  .addField("Vote me", "[Vote Minasaki On Discord bot list](https://discordbots.org/bot/452360666020577281/vote)") 
+  .addDescription("Vote Deya On [Discord bot list](https://discordbots.org/bot/454618737153409026/vote)") 
   .setFooter("If you can't hear the music, please reconnect. If you still can't hear maybe the bot is restarting!")
   .setTimestamp();
 
