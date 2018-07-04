@@ -1,14 +1,14 @@
 const { Command } = require('discord.js-commando');
 const { RichEmbed } = require('discord.js');
 
-module.exports = class statsCommand extends Command {
+module.exports = class botinfoCommand extends Command {
     constructor(client) {
         super(client, {
-            name: 'stats',
-	    aliases: ["info", "specs"],
+            name: 'botinfo',
+	    aliases: ["info", "bi"],
             group: 'group4',
-            memberName: 'stats',
-	    description: 'Shows stats about the Bot'
+            memberName: 'botinfo',
+	    description: 'Shows info about the Bot'
         });
     }
     async run(msg) {
@@ -23,15 +23,16 @@ module.exports = class statsCommand extends Command {
         let mins = Math.floor((totalSeconds / 60) % 60);
 
         const embed = new RichEmbed()
-        embed.setAuthor(this.client.user.username)
+
         embed.setThumbnail(this.client.user.avatarURL)
-        embed.setDescription(`Status of ${this.client.user.username}`)
+        embed.setDescription(`Info of ${this.client.user.username}`)
         embed.setColor('RANDOM')
-        embed.addField(`Memory usage:`,`${Math.round(used * 100) / 100}MB` ,true)
-        embed.addField(`Uptime:`,`${days}:${hours}:${mins}:${realTotalSecs}` ,true)
-        embed.addField('Node and Library',` Node: ${process.version} discord.js` ,true)
-        embed.addField(`Platform`,`${os.platform}`, true)
-        embed.addField('Status',`On ${this.client.guilds.size} servers, with a total of ${this.client.users.size} users and ${this.client.channels.size} Channels.`)
+        embed.addField('Creator', '<@!444454206800396309> | Sharif#2769')
+	embed.addField("Created At", `${bot.user.createdAt}`)
+        embed.addField('Node', `${process.version}`)
+        embed.addField('Library', 'discord.js')
+        embed.addField('Operating System', `${os.platform} ${arch}`)
+	embed.addField('Usefull link:', '[Invite me](https://discordapp.com/oauth2/authorize?client_id=454618737153409026&scope=bot&permissions=1346452502) | [Vote me](https://discordbots.org/bot/454618737153409026/vote) | [Support server](https://discord.gg/kDAYc8M)') 
             code: 'AsciiDoc'
         return msg.embed(embed);
     }
