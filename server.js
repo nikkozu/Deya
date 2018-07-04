@@ -11,7 +11,7 @@ const { PREFIX } = require('./config');
 // ini ingat²lah
 const client = new Commando.Client({
   owner: '444454206800396309', 
-  commandPrefix: './config', 
+  commandPrefix: 'dy!', 
   disableEveryone: true,
   unknownCommandResponse: false
 });
