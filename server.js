@@ -68,6 +68,7 @@ client.on('ready', () => {
   client.user.setActivity('dy!help | By Sharif#2769');
 });
 
+// nah di sini event msg nya ngerti? 
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(PREFIX)) return undefined;
@@ -81,7 +82,7 @@ client.on('message', async msg => { // eslint-disable-line
 	command = command.slice(PREFIX.length)
 	
 
-
+// nah di sini lah bagian sulitnya ya allah
 	if (command === 'play') {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
@@ -284,5 +285,5 @@ var pleyembed = new RichEmbed()
 	serverQueue.textChannel.send(pleyembed);
 
 }
-
-client.login(process.env.TOKEN);
+// loginnya di sini bege jangan di atas
+client.login(process.env.TOKEN); // ayo kita coba, bismillah
