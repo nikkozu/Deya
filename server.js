@@ -1,5 +1,6 @@
 // ini package mang
 const Commando = require('discord.js-commando');
+const { Util, RichEmbed } = require('discord.js');
 const path = require('path');
 const DBL = require("dblapi.js");
 const YouTube = require('simple-youtube-api');
